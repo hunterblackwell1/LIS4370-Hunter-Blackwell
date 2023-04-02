@@ -1,0 +1,38 @@
+---
+title: 'Module #12 Assignment'
+author: "Hunter Blackwell"
+date: "2023-04-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+### This is my R Markdown document. Lets run some code for fun. 
+
+## Github link: https://github.com/hunterblackwell1/LIS4370-Hunter-Blackwell
+
+# Step 1 - Load in the economics dataset.
+Load ggplot2 to access dataset.
+```{r, Step 1} 
+library(ggplot2)
+econ <- economics
+```
+
+## Including Plots
+
+# Step 2 - Analyze structure and first five rows of dataset
+Use str() and head()
+```{r, Step 2}
+str(econ)
+head(econ)
+```
+# Step 3 - Create a plot of population and personal savings rate
+```{r, Step 3}
+ggplot(econ, aes(x = pop, y = psavert)) + geom_point(aes(color = uempmed)) + labs(x = "Population", y = "Personal Savings Rate", title = "Population & Savings Rate")
+
+```
+
